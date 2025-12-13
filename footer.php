@@ -1,0 +1,127 @@
+<?php
+/**
+ * The template for displaying the footer
+ *
+ * Contains the closing of the #content div and all content after.
+ *
+ * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
+ *
+ * @package _s
+ */
+
+?>
+       <!-- main-footer -->
+      <footer class="main-footer">
+            
+            <div class="widget-section">
+                <div class="auto-container">
+                    <div class="row clearfix">
+                        <div class="col-lg-3 col-md-6 col-sm-12 footer-column">
+                            <div class="footer-widget links-widget">
+                                <div class="widget-title">
+                                    <h3>About Us</h3>
+                                </div>
+                                <div class="widget-content">
+                                    <p>The Edo State Flood, Erosion, and Watershed Management Agency (Edo FEWMA) was founded in July 2021 as the state's principal agency for climate change mitigation, flood and erosion control, catchment and watershed management, and other environmental challenges.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6 col-sm-12 footer-column">
+                            <div class="footer-widget links-widget">
+                                <div class="widget-title">
+                                    <h3>Quick Links</h3>
+                                </div>
+                                <div class="widget-content">
+                                    <ul class="links-list clearfix">
+                                        <li><a href="about.html">About Us</a></li>
+                                        <li><a href="departments.html">Departments</a></li>
+                                        <li><a href="#">Projects</a></li>
+                                        <li><a href="#">Photo Gallery</a></li>
+                                        <li><a href="#">News</a></li>
+                                        <li><a href="contact.html">Contact</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6 col-sm-12 footer-column">
+                            <div class="footer-widget contact-widget">
+                                <div class="widget-title">
+                                    <h3>Contact Info</h3>
+                                </div>
+                                <div class="widget-content">
+                                    <ul class="info clearfix">
+                                        <li>
+                                            <!--<h5>Location</h5>-->
+                                            <p>9th Floor, Palm House, <br /> Sapele Road,  Benin City, Edo State, Nigeria.</p>
+                                        </li>
+                                        <li>
+                                            <h5>Phone</h5>
+                                            <p>+2348173150000, +2348173750000</p>
+                                        </li>
+                                        <li>
+                                            <h5>Email</h5>
+                                            <p>fewma@edostate.gov.ng</p>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6 col-sm-12 footer-column">
+                            <div class="footer-widget register-widget">
+                                <div class="inner-box" style="background-color:#076a3c">
+                                    <div class="upper">
+                                        <div class="icon-box"><i class="flaticon-edit text-success"></i></div>
+                                        <h4>Register Your Issue</h4>
+                                    </div>
+                                    <p>Here you can report an issue and make requests.</p>
+                                    <a href="#">Report Now</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+           <div class="footer-bottom"  style="background-color:#076a3c">
+                <div class="auto-container">
+                    <div class="bottom-inner clearfix">
+                        <div class="copyright pull-left text-white">
+                            <p class="text-white">&copy; 2023<!-- <a href="index.html">Whitehall City Govt.</a>--> All Rights Reserved. EDOFEWMA</p>
+                        </div>
+                        <!--<ul class="footer-nav clearfix pull-right">
+                            <li><a href="index.html">FAQ’s</a></li>
+                            <li><a href="index.html">Covid’19 Updates </a></li>
+                            <li><a href="index.html">Government</a></li>
+                        </ul>-->
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!--Scroll to top-->
+        <button class="scroll-top scroll-to-target" data-target="html">
+            <span class="fas fa-angle-up"></span>
+        </button>
+    </div>
+
+
+    <!-- jequery plugins -->
+    <!-- jequery plugins -->
+    <script src="assets/js/jquery.js"></script>
+    <script src="assets/js/popper.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/owl.js"></script>
+    <script src="assets/js/wow.js"></script>
+    <script src="assets/js/validation.js"></script>
+    <script src="assets/js/jquery.fancybox.js"></script>
+    <script src="assets/js/appear.js"></script>
+    <script src="assets/js/scrollbar.js"></script>
+    <script src="assets/js/jquery.nice-select.min.js"></script>
+    <script src="assets/js/nav-tool.js"></script>
+    <script src="assets/js/bxslider.js"></script>
+
+    
+    <!-- main-js -->
+    <script src="assets/js/script.js"></script>
+<?php wp_footer(); ?>
+
+</body>
+</html>

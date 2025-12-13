@@ -1,0 +1,7 @@
+// Import your custom theme parts
+// (Order matters: Colors first, then main styles, then responsive overrides)
+
+@import "color";        // Was color.css
+@import "theme-style";  // Was style.css
+@import "responsive";   // Was responsive.css
+
