@@ -114,7 +114,7 @@
                     <div class="col-lg-3 col-md-12 col-sm-12 image-column" style="padding-top:50px">
                         <div class="image_block_1">
                             <div class="image-box">
-                                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/only-logo.png">
+                                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/logo-sidebar2.png">
 <!--                                <div class="text">
                                     <h4>“Residents Showed Commitment & Courage In this Crucial Situation.”</h4>
                                 </div>
@@ -155,8 +155,8 @@
 
         <!-- explore-section -->
         <section class="explore-section centred bg-color-2">
-    <figure class="vector-image"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/icons/vector-1.png" alt=""></figure>
-    <div class="pattern-layer" style="background-image: url(<?php echo get_template_directory_uri(); ?>/assets/images/shape/shape-1.png);"></div>
+    <!-- <figure class="vector-image"><img src="<?php echo get_template_directory_uri(); ?> /assets/images/icons/vector-1.png" alt=""></figure>
+    <div class="pattern-layer" style="background-image: url(<?php echo get_template_directory_uri(); ?> /assets/images/shape/shape-1.png);"></div> -->
     <div class="auto-container">
         <div class="sec-title centred light">
           <h2>Projects</h2>
