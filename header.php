@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html <?php language_attributes(); ?>>
 
-<!-- Mirrored from www.fastrackportal.com/edofewma/mandate.php by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 01 Feb 2023 07:47:38 GMT -->
+
 <!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
 <head>
 <meta charset="<?php bloginfo( 'charset' ); ?>">
@@ -104,7 +104,7 @@
             <form method="get" action="<?php echo esc_url( home_url( '/' ) ); ?>">
                 <div class="form-group">
                     <fieldset>
-                        <input type="search" class="form-control" name="s" value="<?php echo get_search_query(); ?>" placeholder="Search EDOFEWMA" required>
+                        <input type="search" class="form-control" name="s" value="<?php echo get_search_query(); ?>" placeholder="Search EDO NEWMAP-EIB" required>
                         
                         <input type="submit" value="Search Now!" class="theme-btn style-four" style="background: #309E5A;">
                     </fieldset>
@@ -150,9 +150,9 @@
                                 <div class="contact-info">
                                     <h4>Contact Info</h4>
                                     <ul>
-                                        <li>9th Floor, Palm House, Sapele Road, Benin City, Edo State, Nigeria</li>
+                                        <li>5th Floor, Block D, Secretariat Complex, Sapele Road,Benin City, Edo State, Nigeria.</li>
                                         <li>+2348173150000, +2348173750000</li>
-                                        <li>fewma@edostate.gov.ng</li>
+                                        <li>edonewmapeib@gmail.com</li>
                                     </ul>
                                 </div>
                                 <!--<ul class="social-box">
@@ -177,7 +177,7 @@
                 <div class="auto-container">
                     <div class="top-inner clearfix">
                         <div class="left-column pull-left clearfix">
-                            <div class="weathre-box"><i class="flaticon-sunny-day-or-sun-weather text-white"></i>Email: fewma@edostate.gov.ng |</div>
+                            <div class="weathre-box"><i class="flaticon-sunny-day-or-sun-weather text-white"></i>Email: edonewmapeib@gmail.com |</div>
                             <!--<ul class="links-box clearfix">
                                 <li><a href="index.html">In my area</a></li>
                                 <li><a href="index.html">Faq’s</a></li>
@@ -191,10 +191,11 @@
                                 <!--<li><i class="flaticon-fast text-white"></i><a href="index.html">Today: 09.00 to 18.45</a></li>-->
                             </ul>
                             <ul class="social-links clearfix">
-                                <li><a href="index-2.html"><i class="fab fa-facebook-square"></i></a></li>
-                                <li><a href="index-2.html"><i class="fab fa-twitter-square"></i></a></li>
-                                <li><a href="index-2.html"><i class="fab fa-youtube-square"></i></a></li>
-                                <li><a href="index-2.html"><i class="fab fa-linkedin"></i></a></li>
+                                <li><a href="https://x.com/edonewmap_eib"><span class="fab fa-twitter"></span></a></li>
+                        <li><a href="https://www.facebook.com/profile.php?id=61576501017541"><span class="fab fa-facebook-square"></span></a></li>
+                        <!-- <li><a href="#"><span class="fab fa-pinterest-p"></span></a></li> -->
+                        <li><a href="https://www.instagram.com/edonewmap_eib"><span class="fab fa-instagram"></span></a></li>
+                        <li><a href="#"><span class="fab fa-youtube"></span></a></li>
                             </ul>
                         </div>
                     </div>
@@ -229,7 +230,7 @@
                 <div class="container-fluid" style="width:80%">
                     <div class="outer-box clearfix">
                         <div class="logo-box pull-left">
-                            <figure class="logo"><a href="index-2.html"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/logo-4.png" alt=""></a></figure>
+                            <figure class="logo"><a href="<?php echo home_url('/')?>"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/logo-4.png" alt=""></a></figure>
                         </div>
                         <div class="menu-area clearfix pull-right">
                             <!--Mobile Navigation Toggler-->
@@ -241,7 +242,7 @@
                             <nav class="main-menu navbar-expand-md navbar-light">
                                 <div class="collapse navbar-collapse show clearfix" id="navbarSupportedContent">
                                     <ul class="navigation clearfix">
-                                        <li><a href="index.html">Home</a></li>   
+                                        <li><a href="<?php echo home_url("/") ?>">Home</a></li>   
                                         <!--<li class="current dropdown"><a href="index.html">Home</a>
                                             <ul>
                                                 <li><a href="index.html">Home Page 01</a></li>
@@ -256,16 +257,16 @@
                                                 </li>
                                             </ul>
                                         </li>-->
-                                        <li class="dropdown current"><a href="#">About Us</a>
+                                        <!-- <li class="dropdown current"><a href="#">About Us</a>
                                             <ul>
-                                                <li><a href="about.html">Overview</a></li>
+                                                <li><a href="#">Overview</a></li>
                                                 <li><a href="mandate.html">Mandate</a></li>
                                                 <li><a href="vision.html">Vision</a></li>
                                                 <li><a href="mission.html">Mission</a></li>
                                                 <li><a href="what.html">What We Do</a></li>
                                                 <li><a href="organogram.html">Organogram</a></li>
                                                 <li><a href="ceo.html">Chief Executive Officer</a></li>
-                                                
+                                                 -->
                                                 <!--<li class="dropdown"><a href="index.html">Portfolio</a>
                                                     <ul>
                                                         <li><a href="portfolio.html">Title Overlay</a></li>
@@ -276,20 +277,35 @@
                                                 <!--<li><a href="faq.html">Faq’s</a></li>
                                                 <li><a href="coming-soon.html">Coming Soon</a></li>
                                                 <li><a href="error.html">404</a></li>-->
-                                            </ul>
-                                        </li>
-                                        
-                                        <li class="dropdown"><a href="index-2.html">Departments &amp; Functions</a>
-                                            <ul> 
-                                               <li><a href="hr.html">HR./Administration /Project Secretary</a></li>
-                                                <li><a href="safeguards.html">Safeguards</a></li>
-                                                <li><a href="fiduciary.html">Fiduciary Directorate</a></li>
-                                                <li><a href="remedial.html">Remediation/ Adaptive/Mitigation</a></li>
-                                                <li><a href="monitoring.html">Monitoring &amp; Evaluation</a></li>
+                                            <!-- </ul>
+                                        </li> -->
+                                        <li class="dropdown"><a href="<?php echo site_url('/overview'); ?>">About Us</a>
+                                           <ul>
+                                                <li><a href="<?php echo site_url('/overview'); ?>">Overview</a></li>
+                                                <li><a href="<?php echo site_url('/mandate'); ?>">Mandate</a></li>
+                                                <li><a href="<?php echo site_url('/vision'); ?>">Vision</a></li>
+                                                <li><a href="<?php echo site_url('/mission'); ?>">Mission</a></li>
+                                                <li><a href="<?php echo site_url('/what'); ?>">What We Do</a></li>
+                                                <li><a href="<?php echo site_url('/stakeholders'); ?>">Stakeholders</a></li>
+                                                <li><a href="<?php echo site_url('/director'); ?>">SPC/CEO</a></li>
+                                                
+                                                
                                             </ul>
                                         </li> 
-                                        <li class=" "><a href="projects.html">Projects</a></li> 
-                                        <li class=" "><a href="projects.html">News</a></li> 
+                                        
+                                        <li class="dropdown"><a href="#">Departments &amp; Functions</a>
+                                            <ul> 
+                                               <li><a href="<?php echo site_url('/hr'); ?>">HR./Administration /Project Secretary</a></li>
+                                                <li><a href="<?php echo site_url('/safeguards'); ?>">Safeguards</a></li>
+                                                <li><a href="<?php echo site_url('/fiduciary'); ?>" ></a>fiduciary Directorate</a></li>
+                                                <li><a href="<?php echo site_url('/remediation'); ?>">Remediation/ Adaptive/Mitigation</a></li>
+                                                <li><a href="<?php echo site_url('/Engineering'); ?>">Engineering Operations</a></li>
+                                                <li><a href="<?php echo site_url('/legal'); ?>">Legal &amp; Communication</a></li>
+                                                <li><a href="<?php echo site_url('/monitoring'); ?>">Monitoring &amp; Evaluation</a></li>
+                                            </ul>
+                                        </li>  
+                                        <li class=" "><a href="<?php echo site_url('/projects')?>">Projects</a></li> 
+                                        <li class=" "><a href="<?php echo site_url('/news')?>">News</a></li> 
                                         <!-- <li class="dropdown"><a href="#">Media Center</a>
                                             <ul>
                                                 <li><a href="news.html">News</a></li>
@@ -315,7 +331,7 @@
                                                 <li><a href="blog-details.html">Single Post</a></li>
                                             </ul>
                                         </li>--> 
-                                        <li><a href="contact.html">Contact</a></li>   
+                                        <li><a href="<?php echo site_url('/contact'); ?>">Contact</a></li>   
                                     </ul>
                                 </div>
                             </nav>
@@ -348,7 +364,7 @@
                 <div class="container-fluid" style="width:80%">
                     <div class="outer-box clearfix">
                         <div class="logo-box pull-left">
-                            <figure class="logo"><a href="index-2.html"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/logo-4.png" alt=""></a></figure>
+                            <figure class="logo"><a href="<?php echo home_url('/')?>"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/logo-4.png" alt=""></a></figure>
                         </div>
                         <div class="menu-area clearfix pull-right">
                             <nav class="main-menu clearfix">
@@ -398,11 +414,11 @@
                 </div>
                 <div class="social-links">
                     <ul class="clearfix">
-                        <li><a href="index-2.html"><span class="fab fa-twitter"></span></a></li>
-                        <li><a href="index-2.html"><span class="fab fa-facebook-square"></span></a></li>
-                        <li><a href="index-2.html"><span class="fab fa-pinterest-p"></span></a></li>
-                        <li><a href="index-2.html"><span class="fab fa-instagram"></span></a></li>
-                        <li><a href="index-2.html"><span class="fab fa-youtube"></span></a></li>
+                        <li><a href="https://x.com/edonewmap_eib"><span class="fab fa-twitter"></span></a></li>
+                        <li><a href="https://www.facebook.com/profile.php?id=61576501017541"><span class="fab fa-facebook-square"></span></a></li>
+                        <!-- <li><a href="#"><span class="fab fa-pinterest-p"></span></a></li> -->
+                        <li><a href="https://www.instagram.com/edonewmap_eib"><span class="fab fa-instagram"></span></a></li>
+                        <li><a href="#"><span class="fab fa-youtube"></span></a></li>
                     </ul>
                 </div>
             </nav>

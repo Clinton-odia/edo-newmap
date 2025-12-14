@@ -6,13 +6,13 @@ Template Name: News Listing
 get_header(); ?>
 
 <section class="page-title" style=" background-image: url(<?php echo get_template_directory_uri(); ?>/assets/images/background/bgnd-1.jpg);">
-    <div class="auto-container">
+    <!-- <div class="auto-container">
         <div class="content-box">
             <div class="title centred">
                 <h1 class="text-white">Latest News & Updates</h1>
             </div>
         </div>
-    </div>
+    </div> -->
 </section>
 
 <style>

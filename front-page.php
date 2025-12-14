@@ -4,7 +4,7 @@
     background: none;} -->
 </style>
 <!--background: #252638;-->
-<title>Edofewma, Benin</title>
+<title>EDO NEWMAP-EIB, Benin</title>
         <!-- banner-section -->
         <section class="banner-section style-one" style="height:600px">
             <div class="banner-carousel owl-theme owl-carousel owl-dots-none">
@@ -12,7 +12,7 @@
                     <div class="image-layer" style="background-image:url(<?php echo get_template_directory_uri(); ?>/assets/images/banner/banner-5.jpg)"></div>
                     <div class="auto-container">
                         <div class="content-box">
-                            <h6 class="text-white"><i class="flaticon-star text-white"></i>EDOFEWMA</h6>
+                            <h6 class="text-white"><i class="flaticon-star text-white"></i>EDO NEWMAP-EIB</h6>
                             <p class="font-weight-bold" style="font-size:65px; line-height:1.2em; text-shadow: 0px 5px 5px rgba(26, 22, 22, 0.79); ">Enhancing Lives, Communities &amp;<br> the Environment.</p>
                             <!--<p>Righteous indignation and dislike men who are so beguiled & demoralized by the charms of pleasure of the moment.</p>-->
                             <!--<div class="btn-box">
@@ -100,7 +100,7 @@
                         <div class="content_block_1">
                             <div class="content-box">
                                 <div class="sec-title">
-                                    <h6><i class="flaticon-star text-success"></i><span class="text-success">Welcome to EDOFEWMA</span></h6>
+                                    <h6><i class="flaticon-star text-success"></i><span class="text-success">Welcome to EDO NEWMAP-EIB</span></h6>
                                     <h2 class="text-white">Building an Integrated Flood and Erosion Management system. </h2>
                                     <div class="title-shape"></div>
                                 </div>
@@ -114,7 +114,7 @@
                     <div class="col-lg-3 col-md-12 col-sm-12 image-column" style="padding-top:50px">
                         <div class="image_block_1">
                             <div class="image-box">
-                                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/logo-sidebar2.png">
+                                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/logo-sidebar2.png" alt="EDO NEWMAP-EIB">
 <!--                                <div class="text">
                                     <h4>“Residents Showed Commitment & Courage In this Crucial Situation.”</h4>
                                 </div>
@@ -302,8 +302,8 @@
                     <div class="col-lg-3 col-md-3 col-sm-12 service-block">
                         <div class="service-block-one wow fadeInUp animated animated" data-wow-delay="00ms" data-wow-duration="1500ms">
                             <div class="inner-box">
-                                <h4><a href="safeguards.html">Safeguards</a></h4>
-                                <div class="btn-box"><a href="safeguards.html">More</a></div>
+                                <h4><a href="<?php echo site_url('/safeguards')?>">Safeguards</a></h4>
+                                <div class="btn-box"><a href="<?php echo site_url('/safeguards')?>">More</a></div>
                                 <div class="icon-box"><i class="flaticon-traffic-sign"></i></div>
                             </div>
                         </div>
@@ -311,8 +311,8 @@
                     <div class="col-lg-3 col-md-3 col-sm-12 service-block">
                         <div class="service-block-one wow fadeInUp animated animated" data-wow-delay="200ms" data-wow-duration="1500ms">
                             <div class="inner-box">
-                                <h4 class="mb-4 pb-3"><a href="fiduciary.html">Fiduciary Directorate</a></h4>
-                                <div class="btn-box"><a href="fiduciary.html">More</a></div>
+                                <h4 class="mb-4 pb-3"><a href="<?php echo site_url('/fiduciary')?>">Fiduciary Directorate</a></h4>
+                                <div class="btn-box"><a href="<?php echo site_url('/fiduciary')?>">More</a></div>
                                 <div class="icon-box"><i class="flaticon-statue"></i></div>
                             </div>
                         </div>
@@ -320,8 +320,8 @@
                     <div class="col-lg-3 col-md-3 col-sm-12 service-block">
                         <div class="service-block-one wow fadeInUp animated animated" data-wow-delay="400ms" data-wow-duration="1500ms">
                             <div class="inner-box">
-                                <h4><a href="remediation.html">Remediation...</a></h4>
-                                <div class="btn-box"><a href="remediation.html">More</a></div>
+                                <h4><a href="<?php echo site_url('/remediation')?>">Remediation...</a></h4>
+                                <div class="btn-box"><a href="<?php echo site_url('/remediation')?>">More</a></div>
                                 <div class="icon-box"><i class="flaticon-chinese-house"></i></div>
                             </div>
                         </div>
@@ -329,8 +329,8 @@
                     <div class="col-lg-3 col-md-3 col-sm-12 service-block">
                         <div class="service-block-one wow fadeInUp animated animated" data-wow-delay="600ms" data-wow-duration="1500ms">
                             <div class="inner-box">
-                                <h4><a href="Monitoring-2.html">Monitoring...</a></h4>
-                                <div class="btn-box"><a href="Monitoring-2.html">More</a></div>
+                                <h4><a href="<?php echo site_url('/monitoring')?>">Monitoring...</a></h4>
+                                <div class="btn-box"><a href="<?php echo site_url('/monitoring')?>">More</a></div>
                                 <div class="icon-box"><i class="flaticon-hospital"></i></div>
                             </div>
                         </div>
@@ -338,7 +338,7 @@
                      <div class="col-lg-12 col-md-6 col-sm-12 text-center">
                     
                     <div class="btn-box"  style="margin-top:10px">
-                                <a href="departments.html" class="btn btn-success btn-lg py-3 pl-3 pr-3">Explore all Departments</a>
+                                <a href="#" class="btn btn-success btn-lg py-3 pl-3 pr-3">Explore all Departments</a>
                             </div>
                     </div>
                 </div>

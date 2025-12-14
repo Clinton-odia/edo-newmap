@@ -13,22 +13,21 @@ get_header()?>
                             <div class="content-box">
                                 <div class="sec-title">
                                     <h6><i class="flaticon-star"></i><span>About Edo FEWMA</span></h6>
-                                    <h2>Chief Executive Officer</h2>
+                                    <h2>State Project Coordinator</h2>
                                     <div class="title-shape"></div>
                                 </div>
                                 <div class="text">
-                                   <h5>Dr. Tom Obaseki is the Pioneer Chief Executive Officer (CEO) of the Edo State Flood, Erosion and Watershed Management Agency (EDOFEWMA). </h5>
+                                   <h5>Hon. Bawa Mohammed Okoyomoh is the Chief Executive Officer (CEO) of the Edo State Flood, Erosion and Watershed Management Agency (EDOFEWMA).</h5>
                                    
                                     
-                                    <p>He is also the Project Coordinator, Edo State Nigeria Erosion and Watershed Management Project, (NEWMAP), a World Bank assisted project responsible for flood and gully erosion remediation domiciled in the Ministry of Environment of the State Government. </p><br/>
+                                    <p>He is also the Project Coordinator, Edo State Nigeria Climate Adaptation-Erosion and Watershed Project (NEWMAP-EIB), a European Investment Bank-assisted project responsible for tackling hydra-headed climate-change challenges domiciled in the Ministry of Environment of the State Government. </p><br/>
 
- <p>As lead of NEWMAP, Tom has expertly steered the affairs of the Project, which culminated in Edo State placing as the top performing State of the 23 States participating in NEWMAP. </p><br/>
+ <p>As lead of NEWMAP-EIB, Hon. Bawa has expertly steered the activation of the Project, which culminated in the State’s prompt payment of the N800 million counterpart fund to support the transformation Agenda of the Edo State Governor, Senator Monday Okpebholo.</p><br/>
 
- <p>Earlier, between 2009 and 2016, Dr. Tom Obaseki served as the Technical and Special Assistant to the Commissioner for Environment and Public Utilities, in Edo State Government. His experience in environmental management in Edo State spans over 13 years. Tom also possesses expertise in infrastructural and environmental development, and procurement and supply chain management. </p><br/>
+ <p>Recently, during the national launch in Abuja, Hon. Bawa Mohammed served as the strategic focal point for State, National, and International stakeholders. His approach to environmental management in Edo State prioritizes adherence to international best practices. Hon. Bawa also possesses expertise in donor fund optimization, climate resilience strengthening, and sustainable livelihood safeguarding.</p><br/>
 
-<p>Dr. Tom Obaseki who was, in 2018, on Residency to the Environment Centre, Lancaster University in the United Kingdom, is also a Recirculate “Ambassador”, a Global Challenge Research Fund (GCRF) supported project through Lancaster University, which is geared toward a circular water economy for Africa. </p><br/>
+<p>Hon. Bawa Mohammed Okoyomoh, who championed the State’s readiness for the 175 million Euro facility, is also a key proponent of the “Transformation Agenda”, a strategic governance initiative supported by the European Investment Bank (EIB), which is geared toward landscape restoration and correct soil formation for the State.</p><br/>
 
-<p>He is a Certified Public Leader from Harvard Kennedy School of Government, Harvard University, Boston Massachusetts and a Fellow of the Nigeria Environmental Society.
 </p>
                                 </div>
                                 
@@ -38,9 +37,9 @@ get_header()?>
                     <div class="col-lg-6 col-md-12 col-sm-12 image-column">
                         <div class="image_block_1">
                             <div class="image-box">
-                                <figure class="image"><img src="<?php echo  get_template_directory_uri(); ?>/assets/images/team/ceo.jpg" alt=""></figure>
+                                <figure class="image"><img src="<?php echo  get_template_directory_uri(); ?>/assets/images/team/ceo.png" alt=""></figure>
                                 <div class="text">
-                                    <h4>DR. TOM OBASEKI, Chief Executive Officer, Edo FEWMA</h4>
+                                    <h4>HON. BAWA MOHAMMED OKOYOMOH, CEO EdoFEWMA/PC Edo State NEWMAP-EIB</h4>
                                 </div>
                             </div>
                         </div>

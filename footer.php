@@ -22,7 +22,7 @@
                                     <h3>About Us</h3>
                                 </div>
                                 <div class="widget-content">
-                                    <p>The Edo State Flood, Erosion, and Watershed Management Agency (Edo FEWMA) was founded in July 2021 as the state's principal agency for climate change mitigation, flood and erosion control, catchment and watershed management, and other environmental challenges.</p>
+                                    <p>Edo NEWMAP-EIB is the European Investment Bank-Assisted Nigeria Climate Adaptation - Erosion and Watershed Project aimed at reducing land degradation</p>
                                 </div>
                             </div>
                         </div>
@@ -34,11 +34,11 @@
                                 <div class="widget-content">
                                     <ul class="links-list clearfix">
                                         <li><a href="about.html">About Us</a></li>
-                                        <li><a href="departments.html">Departments</a></li>
-                                        <li><a href="#">Projects</a></li>
-                                        <li><a href="#">Photo Gallery</a></li>
-                                        <li><a href="#">News</a></li>
-                                        <li><a href="contact.html">Contact</a></li>
+                                        <li><a href="<?php echo site_url('/hr')?>">Departments</a></li>
+                                        <li><a href="<?php echo site_url('/projects')?>">Projects</a></li>
+                                        <!-- <li><a href="#">Photo Gallery</a></li> -->
+                                        <li><a href="<?php echo site_url('/news') ?>">News</a></li>
+                                        <li><a href="<?php echo site_url('/contact') ?>">Contact</a></li>
                                     </ul>
                                 </div>
                             </div>
@@ -52,7 +52,7 @@
                                     <ul class="info clearfix">
                                         <li>
                                             <!--<h5>Location</h5>-->
-                                            <p>9th Floor, Palm House, <br /> Sapele Road,  Benin City, Edo State, Nigeria.</p>
+                                            <p>5th Floor, Block D, Secretariat Complex, Sapele Road,Benin City, Edo State, Nigeria.</p>
                                         </li>
                                         <li>
                                             <h5>Phone</h5>
@@ -60,7 +60,7 @@
                                         </li>
                                         <li>
                                             <h5>Email</h5>
-                                            <p>fewma@edostate.gov.ng</p>
+                                            <p>edonewmapeib@gmail.com</p>
                                         </li>
                                     </ul>
                                 </div>
@@ -74,7 +74,7 @@
                                         <h4>Register Your Issue</h4>
                                     </div>
                                     <p>Here you can report an issue and make requests.</p>
-                                    <a href="#">Report Now</a>
+                                    <a href="<?php echo site_url('/contact'); ?>">Report Now</a>
                                 </div>
                             </div>
                         </div>
@@ -85,7 +85,7 @@
                 <div class="auto-container">
                     <div class="bottom-inner clearfix">
                         <div class="copyright pull-left text-white">
-                            <p class="text-white">&copy; 2023<!-- <a href="index.html">Whitehall City Govt.</a>--> All Rights Reserved. EDOFEWMA</p>
+                            <p class="text-white">&copy; 2026<!-- <a href="index.html">Whitehall City Govt.</a>--> All Rights Reserved. EDO NEWMAP-EIB</p>
                         </div>
                         <!--<ul class="footer-nav clearfix pull-right">
                             <li><a href="index.html">FAQ’s</a></li>
