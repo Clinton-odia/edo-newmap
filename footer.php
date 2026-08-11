@@ -115,6 +115,49 @@
     </div>
 
 
+        <!-- Floating WhatsApp Live Chat Widget (TOR §4B #11) -->
+        <a href="https://wa.me/2348173150000?text=Hello%20EDO%20NEWMAP-EIB%20Team" target="_blank" class="whatsapp-float-btn" title="Chat with EDO NEWMAP-EIB Support">
+            <i class="fab fa-whatsapp"></i>
+            <span class="whatsapp-text">Live Support</span>
+        </a>
+
+        <style>
+            .whatsapp-float-btn {
+                position: fixed;
+                bottom: 25px;
+                right: 25px;
+                background-color: #25d366;
+                color: #fff !important;
+                border-radius: 50px;
+                padding: 12px 20px;
+                font-size: 18px;
+                box-shadow: 0px 4px 15px rgba(0,0,0,0.3);
+                z-index: 9999;
+                display: flex;
+                align-items: center;
+                gap: 8px;
+                text-decoration: none !important;
+                transition: all 0.3s ease;
+            }
+            .whatsapp-float-btn i {
+                font-size: 24px;
+            }
+            .whatsapp-float-btn:hover {
+                background-color: #128c7e;
+                transform: translateY(-3px);
+                box-shadow: 0px 6px 20px rgba(0,0,0,0.4);
+            }
+            @media (max-width: 767px) {
+                .whatsapp-float-btn .whatsapp-text {
+                    display: none;
+                }
+                .whatsapp-float-btn {
+                    padding: 14px;
+                    border-radius: 50%;
+                }
+            }
+        </style>
+
 <?php wp_footer(); ?>
 
 </body>

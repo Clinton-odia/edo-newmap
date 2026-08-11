@@ -1,4 +1,35 @@
 <?php get_header(); ?>
+
+<?php
+// Query for Urgent or Public Notices
+$urgent_notice_query = new WP_Query(array(
+    'post_type'      => 'notice',
+    'posts_per_page' => 1,
+    'meta_query'     => array(
+        array(
+            'key'     => '_notice_priority',
+            'value'   => array('Urgent', 'Public Notice'),
+            'compare' => 'IN'
+        )
+    )
+));
+
+if ($urgent_notice_query->have_posts()) :
+    while ($urgent_notice_query->have_posts()) : $urgent_notice_query->the_post();
+?>
+<div class="bg-danger text-white py-2 px-3 alert-dismissible fade show m-0 text-center position-relative" style="z-index: 1000;" role="alert">
+    <div class="auto-container d-flex justify-content-between align-items-center">
+        <span class="small font-weight-bold text-uppercase">
+            <i class="fas fa-exclamation-triangle mr-2"></i> <strong>ANNOUNCEMENT:</strong> <?php the_title(); ?>
+        </span>
+        <a href="<?php the_permalink(); ?>" class="btn btn-sm btn-light text-danger font-weight-bold ml-3 py-0">View Notice</a>
+    </div>
+</div>
+<?php
+    endwhile;
+    wp_reset_postdata();
+endif;
+?>
 <!-- .banner-carousel .slide-item:before {
     
     background: none;} -->
@@ -431,6 +462,39 @@
             <?php endif; ?>
             <!-- NEWS QUERY END  -->
 
+        </div>
+    </div>
+</section>
+
+<!-- Partners & Stakeholders Section (TOR §4B) -->
+<section class="clients-section bg-light py-5 border-top">
+    <div class="auto-container">
+        <div class="sec-title centred mb-4">
+            <h6><i class="flaticon-star text-success"></i><span>Institutional Support</span><i class="flaticon-star text-success"></i></h6>
+            <h3 class="font-weight-bold text-dark">Our Key Development Partners & Stakeholders</h3>
+            <div class="title-shape"></div>
+        </div>
+        <div class="row align-items-center justify-content-center text-center">
+            <div class="col-lg-3 col-md-6 col-6 mb-4">
+                <div class="partner-card bg-white p-3 rounded shadow-sm">
+                    <h5 class="m-0 font-weight-bold text-success"><i class="fas fa-university mr-2"></i> European Investment Bank (EIB)</h5>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-6 mb-4">
+                <div class="partner-card bg-white p-3 rounded shadow-sm">
+                    <h5 class="m-0 font-weight-bold text-primary"><i class="fas fa-globe-africa mr-2"></i> World Bank Group</h5>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-6 mb-4">
+                <div class="partner-card bg-white p-3 rounded shadow-sm">
+                    <h5 class="m-0 font-weight-bold text-dark"><i class="fas fa-landmark mr-2"></i> Federal Ministry of Environment</h5>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-6 mb-4">
+                <div class="partner-card bg-white p-3 rounded shadow-sm">
+                    <h5 class="m-0 font-weight-bold text-success"><i class="fas fa-shield-alt mr-2"></i> Edo State Government</h5>
+                </div>
+            </div>
         </div>
     </div>
 </section>
