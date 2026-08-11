@@ -253,3 +253,49 @@ if (!is_admin()) {
         exit;
     }
 }
+
+/**
+ * Performance & SEO Optimization (TOR §4F & §4H)
+ */
+// 1. Enable WebP Image Upload Support
+add_filter('upload_mimes', function($mimes) {
+    $mimes['webp'] = 'image/webp';
+    return $mimes;
+});
+
+// 2. Automatic Image ALT Text Fallback
+add_filter('wp_get_attachment_image_attributes', function($attr, $attachment) {
+    if (empty($attr['alt'])) {
+        $parent_id = wp_get_post_parent_id($attachment->ID);
+        if ($parent_id) {
+            $attr['alt'] = esc_attr(get_the_title($parent_id));
+        } else {
+            $attr['alt'] = esc_attr(get_the_title($attachment->ID));
+        }
+    }
+    return $attr;
+}, 10, 2);
+
+// 3. Open Graph Social Sharing Meta Tags
+add_action('wp_head', function() {
+    if (is_single() || is_page()) {
+        global $post;
+        $title       = get_the_title($post->ID);
+        $url         = get_permalink($post->ID);
+        $description = wp_strip_all_tags(get_the_excerpt($post->ID));
+        if (empty($description)) {
+            $description = 'EDO NEWMAP-EIB Project Intervention in Edo State, Nigeria.';
+        }
+        $img_url = get_template_directory_uri() . '/assets/images/background/bgnd-1.jpg';
+        if (has_post_thumbnail($post->ID)) {
+            $img_url = get_the_post_thumbnail_url($post->ID, 'large');
+        }
+
+        echo '<meta property="og:title" content="' . esc_attr($title) . '" />' . "\n";
+        echo '<meta property="og:description" content="' . esc_attr($description) . '" />' . "\n";
+        echo '<meta property="og:url" content="' . esc_url($url) . '" />' . "\n";
+        echo '<meta property="og:image" content="' . esc_url($img_url) . '" />' . "\n";
+        echo '<meta property="og:type" content="article" />' . "\n";
+        echo '<meta name="twitter:card" content="summary_large_image" />' . "\n";
+    }
+}, 5);
