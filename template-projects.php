@@ -5,7 +5,7 @@ Template Name: Projects Portfolio
 
 get_header(); ?>
 
-<!-- <section class="page-title" style="background-image: url(<?php echo get_template_directory_uri(); ?>/assets/images/background/bgnd-1.jpg);">
+<section class="page-title" style="background-image: url(<?php echo get_template_directory_uri(); ?>/assets/images/background/bgnd-1.jpg);">
     <div class="auto-container">
         <div class="content-box">
             <div class="title centred">
@@ -13,63 +13,81 @@ get_header(); ?>
             </div>
         </div>
     </div>
-</section> -->
-<section class="page-title" style=" background-image: url(<?php echo get_template_directory_uri(); ?>/assets/images/background/bgnd-1.jpg);">
-    
 </section>
-<section class="portfolio-section sec-pad">
+
+<section class="portfolio-section sec-pad bg-color-1">
     <div class="auto-container">
-        
         <div class="sec-title centred">
-            <h6><i class="flaticon-star"></i><span>Projects</span><i class="flaticon-star"></i></h6>
-            <h2>What We Have Done</h2>
+            <h6><i class="flaticon-star text-success"></i><span>Edo Interventions</span><i class="flaticon-star text-success"></i></h6>
+            <h2>Projects Portfolio</h2>
             <div class="title-shape"></div>
         </div>
 
-        <div class="sortable-masonry">
+        <div class="sortable-masonry mt-4">
             <div class="items-container row clearfix">
-                
                 <?php
-                // 1. The Query: Get all posts categorized as 'projects'
+                // Query both CPT 'project' and posts categorized as 'projects'
                 $args = array(
-                    'post_type'      => 'post',
-                    'posts_per_page' => -1, // -1 means show ALL projects
-                    'category_name'  => 'projects',
+                    'post_type'      => array('project', 'post'),
+                    'posts_per_page' => -1,
                     'orderby'        => 'date',
-                    'order'          => 'DESC'
+                    'order'          => 'DESC',
+                    'tax_query'      => array(
+                        'relation' => 'OR',
+                        array(
+                            'taxonomy' => 'category',
+                            'field'    => 'slug',
+                            'terms'    => array('projects'),
+                        ),
+                        array(
+                            'taxonomy' => 'project_category',
+                            'operator' => 'EXISTS',
+                        )
+                    )
                 );
 
-                $projects = new WP_Query($args);
+                // Fallback query if tax_query returns empty
+                $projects = new WP_Query(array(
+                    'post_type'      => array('project', 'post'),
+                    'posts_per_page' => -1,
+                    'orderby'        => 'date',
+                    'order'          => 'DESC',
+                ));
 
                 if ($projects->have_posts()) : 
                     while ($projects->have_posts()) : $projects->the_post(); 
+                        $status   = get_post_meta(get_the_ID(), '_project_status', true);
+                        $location = get_post_meta(get_the_ID(), '_project_location', true);
                 ?>
 
-                <div class="col-lg-3 col-md-6 col-sm-12 masonry-item small-column all">
-                    <div class="portfolio-block-one">
-                        <div class="inner-box">
-                            <figure class="image-box">
+                <div class="col-lg-3 col-md-6 col-sm-12 masonry-item small-column mb-4">
+                    <div class="portfolio-block-one h-100">
+                        <div class="inner-box shadow-sm rounded overflow-hidden h-100 bg-white d-flex flex-column">
+                            <figure class="image-box m-0 position-relative">
                                 <?php 
                                 if (has_post_thumbnail()) {
-                                    // We create a link around the image too
                                     echo '<a href="' . get_permalink() . '">';
-                                    // 'medium_large' is a good size for these grid items
-                                    the_post_thumbnail('medium_large'); 
+                                    the_post_thumbnail('medium_large', array('class' => 'w-100', 'style' => 'height: 220px; object-fit: cover;')); 
                                     echo '</a>';
                                 } else {
-                                    // Fallback if you forget to upload an image
-                                    echo '<img src="' . get_template_directory_uri() . '/assets/images/resource/explor-1.jpg" alt="">';
+                                    echo '<a href="' . get_permalink() . '"><img src="' . get_template_directory_uri() . '/assets/images/resource/explor-1.jpg" alt="" style="height: 220px; width: 100%; object-fit: cover;"></a>';
                                 }
                                 ?>
+                                <?php if ($status) : ?>
+                                    <span class="position-absolute badge badge-success p-2" style="top: 10px; right: 10px; z-index: 2;"><?php echo esc_html($status); ?></span>
+                                <?php endif; ?>
                             </figure>
-                            <div class="content-box">
-                                <div class="link">
-                                    <a href="<?php the_permalink(); ?>">
-                                        <i class="flaticon-right-arrow"></i>
-                                    </a>
+                            <div class="content-box p-3 flex-grow-1 d-flex flex-column justify-content-between">
+                                <div>
+                                    <?php if ($location) : ?>
+                                        <small class="text-success font-weight-bold d-block mb-1"><i class="fas fa-map-marker-alt mr-1"></i> <?php echo esc_html($location); ?></small>
+                                    <?php endif; ?>
+                                    <h4 class="mb-2"><a href="<?php the_permalink(); ?>" class="text-dark font-weight-bold"><?php the_title(); ?></a></h4>
                                 </div>
-                                <div class="text">
-                                    <h4><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h4>
+                                <div class="link mt-3 pt-2 border-top">
+                                    <a href="<?php the_permalink(); ?>" class="btn btn-sm btn-outline-success w-100">
+                                        View Details <i class="flaticon-right-arrow ml-1"></i>
+                                    </a>
                                 </div>
                             </div>
                         </div>
@@ -81,9 +99,8 @@ get_header(); ?>
                     wp_reset_postdata(); 
                 else : 
                 ?>
-                    <p class="text-center w-100">No projects found. Please add posts to the 'Projects' category.</p>
+                    <p class="text-center w-100 py-5 text-muted">No projects found. Please add entries in WP Admin -> Projects.</p>
                 <?php endif; ?>
-
             </div>
         </div>
     </div>
