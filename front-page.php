@@ -166,11 +166,10 @@
         <div class="row clearfix">
             
             <?php
-            // 1. QUERY THE 4 LATEST PROJECTS for the Homepage
+            // 1. QUERY THE 4 LATEST PROJECTS for the Homepage (CPT 'project' and posts)
             $project_args = array(
-                'post_type'      => 'post',
+                'post_type'      => array('project', 'post'),
                 'posts_per_page' => 4,             
-                'category_name'  => 'projects', // Ensure your category slug is 'projects'
                 'orderby'        => 'date',
                 'order'          => 'DESC'
             );
