@@ -48,10 +48,12 @@ function _s_setup()
 		*/
 	add_theme_support('post-thumbnails');
 
-	// This theme uses wp_nav_menu() in one location.
+	// Register theme navigation menus.
 	register_nav_menus(
 		array(
-			'menu-1' => esc_html__('Primary', '_s'),
+			'menu-1'      => esc_html__('Primary Menu', '_s'),
+			'footer-menu' => esc_html__('Footer Quick Links', '_s'),
+			'about-menu'  => esc_html__('About Us Submenu', '_s'),
 		)
 	);
 
@@ -173,6 +175,16 @@ require get_template_directory() . '/inc/template-functions.php';
  * Customizer additions.
  */
 require get_template_directory() . '/inc/customizer.php';
+
+/**
+ * Custom Post Types (Projects, Notices, Departments)
+ */
+require get_template_directory() . '/inc/cpt-registers.php';
+
+/**
+ * Custom Meta Boxes & Meta Fields
+ */
+require get_template_directory() . '/inc/meta-fields.php';
 
 // function my_awesome_scripts()
 // {
