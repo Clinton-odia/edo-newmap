@@ -32,14 +32,26 @@
                                     <h3>Quick Links</h3>
                                 </div>
                                 <div class="widget-content">
-                                    <ul class="links-list clearfix">
-                                        <li><a href="about.html">About Us</a></li>
-                                        <li><a href="<?php echo site_url('/hr')?>">Departments</a></li>
-                                        <li><a href="<?php echo site_url('/projects')?>">Projects</a></li>
-                                        <!-- <li><a href="#">Photo Gallery</a></li> -->
-                                        <li><a href="<?php echo site_url('/news') ?>">News</a></li>
-                                        <li><a href="<?php echo site_url('/contact') ?>">Contact</a></li>
-                                    </ul>
+                                    <?php
+                                    if (has_nav_menu('footer-menu')) {
+                                        wp_nav_menu(array(
+                                            'theme_location' => 'footer-menu',
+                                            'menu_class'     => 'links-list clearfix',
+                                            'container'      => false,
+                                        ));
+                                    } else {
+                                    ?>
+                                        <ul class="links-list clearfix">
+                                            <li><a href="<?php echo site_url('/overview'); ?>">About Us</a></li>
+                                            <li><a href="<?php echo site_url('/projects'); ?>">Projects</a></li>
+                                            <li><a href="<?php echo site_url('/gallery'); ?>">Photo Gallery</a></li>
+                                            <li><a href="<?php echo site_url('/downloads'); ?>">Publications</a></li>
+                                            <li><a href="<?php echo site_url('/notices'); ?>">Notices</a></li>
+                                            <li><a href="<?php echo site_url('/news'); ?>">News</a></li>
+                                            <li><a href="<?php echo site_url('/faq'); ?>">FAQs</a></li>
+                                            <li><a href="<?php echo site_url('/contact'); ?>">Contact</a></li>
+                                        </ul>
+                                    <?php } ?>
                                 </div>
                             </div>
                         </div>
