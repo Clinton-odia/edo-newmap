@@ -231,3 +231,25 @@ function edofewma_scripts() {
     wp_enqueue_script( 'edofewma-script-js', get_template_directory_uri() . '/assets/js/script.js', array('jquery', 'owl-js', 'bootstrap-js'), '1.0', true );
 }
 add_action( 'wp_enqueue_scripts', 'edofewma_scripts' );
+
+/**
+ * Security Hardening & Compliance (TOR §4E)
+ */
+// 1. Hide WordPress Version generator tag
+remove_action('wp_head', 'wp_generator');
+add_filter('the_generator', '__return_empty_string');
+
+// 2. Disable XML-RPC Pingbacks & Attacks
+add_filter('xmlrpc_enabled', '__return_false');
+add_filter('wp_headers', function($headers) {
+    unset($headers['X-Pingback']);
+    return $headers;
+});
+
+// 3. Block User Enumeration Scans via /?author=N
+if (!is_admin()) {
+    if (preg_match('/author=([0-9]*)/i', $_SERVER['QUERY_STRING'])) {
+        wp_redirect(home_url(), 301);
+        exit;
+    }
+}
