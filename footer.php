@@ -51,6 +51,8 @@
                                     <li><a href="<?php echo site_url('/news'); ?>">News</a></li>
                                     <li><a href="<?php echo site_url('/faq'); ?>">FAQs</a></li>
                                     <li><a href="<?php echo site_url('/contact'); ?>">Contact</a></li>
+                                    <li><a href="<?php echo site_url('/privacy-policy'); ?>">Privacy Policy</a></li>
+                                    <li><a href="<?php echo wp_login_url(); ?>">Admin Login</a></li>
                                 </ul>
                             <?php } ?>
                         </div>
