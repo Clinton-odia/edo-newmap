@@ -197,9 +197,28 @@ endif;
         <div class="row clearfix">
             
             <?php
-            // 1. QUERY THE 4 LATEST PROJECTS for the Homepage (CPT 'project' and posts)
+            // 1. QUERY THE 4 LATEST PROJECTS for the Homepage (CPT 'project' and posts in category 'projects')
+            $cpt_project_ids_fp = get_posts(array(
+                'post_type'      => 'project',
+                'posts_per_page' => -1,
+                'fields'         => 'ids',
+            ));
+
+            $cat_project_ids_fp = get_posts(array(
+                'post_type'      => 'post',
+                'category_name'  => 'projects',
+                'posts_per_page' => -1,
+                'fields'         => 'ids',
+            ));
+
+            $all_project_ids_fp = array_unique(array_merge($cpt_project_ids_fp, $cat_project_ids_fp));
+            if (empty($all_project_ids_fp)) {
+                $all_project_ids_fp = array(0);
+            }
+
             $project_args = array(
                 'post_type'      => array('project', 'post'),
+                'post__in'       => $all_project_ids_fp,
                 'posts_per_page' => 4,             
                 'orderby'        => 'date',
                 'order'          => 'DESC'

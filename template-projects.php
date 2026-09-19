@@ -26,29 +26,29 @@ get_header(); ?>
         <div class="sortable-masonry mt-4">
             <div class="items-container row clearfix">
                 <?php
-                // Query both CPT 'project' and posts categorized as 'projects'
-                $args = array(
-                    'post_type'      => array('project', 'post'),
+                // Retrieve IDs of custom post type 'project'
+                $cpt_project_ids = get_posts(array(
+                    'post_type'      => 'project',
                     'posts_per_page' => -1,
-                    'orderby'        => 'date',
-                    'order'          => 'DESC',
-                    'tax_query'      => array(
-                        'relation' => 'OR',
-                        array(
-                            'taxonomy' => 'category',
-                            'field'    => 'slug',
-                            'terms'    => array('projects'),
-                        ),
-                        array(
-                            'taxonomy' => 'project_category',
-                            'operator' => 'EXISTS',
-                        )
-                    )
-                );
+                    'fields'         => 'ids',
+                ));
 
-                // Fallback query if tax_query returns empty
+                // Retrieve IDs of standard 'post' entries in category 'projects'
+                $cat_project_ids = get_posts(array(
+                    'post_type'      => 'post',
+                    'category_name'  => 'projects',
+                    'posts_per_page' => -1,
+                    'fields'         => 'ids',
+                ));
+
+                $all_project_ids = array_unique(array_merge($cpt_project_ids, $cat_project_ids));
+                if (empty($all_project_ids)) {
+                    $all_project_ids = array(0);
+                }
+
                 $projects = new WP_Query(array(
                     'post_type'      => array('project', 'post'),
+                    'post__in'       => $all_project_ids,
                     'posts_per_page' => -1,
                     'orderby'        => 'date',
                     'order'          => 'DESC',
