@@ -186,6 +186,11 @@ require get_template_directory() . '/inc/cpt-registers.php';
  */
 require get_template_directory() . '/inc/meta-fields.php';
 
+/**
+ * Theme Custom Admin & Login Styles
+ */
+require get_template_directory() . '/inc/admin-styles.php';
+
 // function my_awesome_scripts()
 // {
 // 	wp_enqueue_style("style", get_template_directory_uri() . "/assets/main.css", [], false);

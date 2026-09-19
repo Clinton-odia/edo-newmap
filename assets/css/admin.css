@@ -1,0 +1,493 @@
+/**
+ * NEWMAP-EIB Theme - WP Admin & Login Custom Stylesheet
+ * 
+ * Theme-owned admin UI styling. Scope limited to body.wp-admin and body.login.
+ */
+
+/* ==========================================================================
+   1. Brand Tokens & CSS Variables
+   ========================================================================== */
+:root {
+  /* Brand Palette */
+  --nm-admin-primary: #0c5a2c;          /* NEWMAP EIB Forest Green */
+  --nm-admin-primary-hover: #08421f;    /* Dark Forest Green */
+  --nm-admin-primary-light: #eaf4ed;    /* Soft Tint */
+  --nm-admin-accent: #c8963e;           /* Warm Gold Accent */
+  --nm-admin-accent-hover: #ab7d2d;
+  
+  /* Neutral Palette */
+  --nm-admin-bg: #f4f6f8;               /* Admin App Canvas */
+  --nm-admin-surface: #ffffff;          /* Cards & Panels */
+  --nm-admin-surface-alt: #f8fafc;
+  --nm-admin-text: #1d2327;             /* Dark Slate */
+  --nm-admin-text-muted: #646970;       /* Secondary Text */
+  --nm-admin-border: #dcdcde;           /* Divider / Border */
+  --nm-admin-border-focus: #0c5a2c;
+  
+  /* Layout & Utility Tokens */
+  --nm-admin-radius: 8px;               /* Cards / Containers */
+  --nm-admin-radius-sm: 6px;            /* Buttons / Inputs */
+  --nm-admin-shadow: 0 2px 8px rgba(0, 0, 0, 0.05), 0 1px 2px rgba(0, 0, 0, 0.04);
+  --nm-admin-shadow-hover: 0 4px 12px rgba(0, 0, 0, 0.08);
+  --nm-admin-font: 'DM Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+  --nm-admin-transition: all 0.2s ease-in-out;
+}
+
+/* ==========================================================================
+   2. Typography & Base Admin Setup
+   ========================================================================== */
+body.wp-admin,
+body.login {
+  font-family: var(--nm-admin-font);
+  background-color: var(--nm-admin-bg);
+  color: var(--nm-admin-text);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#wpbody-content {
+  padding-bottom: 60px;
+}
+
+.wrap h1, 
+.wrap h2,
+.wrap h1.wp-heading-inline {
+  font-family: var(--nm-admin-font);
+  font-weight: 700;
+  color: var(--nm-admin-text);
+  font-size: 1.65rem;
+  letter-spacing: -0.01em;
+  margin-bottom: 15px;
+}
+
+/* Page Title Action (Add New Button) */
+.wrap .page-title-action,
+.wrap .page-title-action:active {
+  background: var(--nm-admin-surface);
+  color: var(--nm-admin-primary);
+  border: 1px solid var(--nm-admin-primary);
+  border-radius: var(--nm-admin-radius-sm);
+  font-family: var(--nm-admin-font);
+  font-weight: 600;
+  padding: 4px 12px;
+  transition: var(--nm-admin-transition);
+}
+
+.wrap .page-title-action:hover {
+  background: var(--nm-admin-primary);
+  color: #ffffff;
+  border-color: var(--nm-admin-primary);
+  transform: translateY(-1px);
+}
+
+/* ==========================================================================
+   3. Top Admin Bar (#wpadminbar)
+   ========================================================================== */
+#wpadminbar {
+  background-color: #072e17 !important; /* Deep Forest Navy */
+  box-shadow: 0 1px 4px rgba(0,0,0,0.15);
+  font-family: var(--nm-admin-font);
+}
+
+#wpadminbar .ab-item,
+#wpadminbar a.ab-item,
+#wpadminbar > #wp-toolbar > #wp-admin-bar-root-default .ab-item {
+  color: #e2e8f0;
+  font-weight: 500;
+}
+
+#wpadminbar:not(.mobile) .ab-top-menu > li:hover > .ab-item,
+#wpadminbar:not(.mobile) .ab-top-menu > li.hover > .ab-item,
+#wpadminbar .ab-top-menu > li.menupop.hover > .ab-item,
+#wpadminbar .ab-top-menu > li > .ab-item:focus {
+  background-color: var(--nm-admin-primary) !important;
+  color: #ffffff !important;
+}
+
+#wpadminbar .ab-submenu {
+  background-color: #072e17 !important;
+  border-radius: 0 0 var(--nm-admin-radius-sm) var(--nm-admin-radius-sm);
+}
+
+#wpadminbar .quicklinks .menupop ul li a:hover,
+#wpadminbar .quicklinks .menupop ul li a:focus {
+  background-color: var(--nm-admin-primary) !important;
+  color: #ffffff !important;
+}
+
+/* WP Logo in Admin Bar */
+#wpadminbar #wp-admin-bar-wp-logo > .ab-item .ab-icon:before {
+  color: var(--nm-admin-accent) !important;
+}
+
+/* ==========================================================================
+   4. Left Sidebar Admin Menu (#adminmenu)
+   ========================================================================== */
+#adminmenuback,
+#adminmenuwrap,
+#adminmenu {
+  background-color: #0a3d1e !important; /* Rich Dark Green Sidebar */
+  font-family: var(--nm-admin-font);
+}
+
+#adminmenu a {
+  color: #d1e2d7;
+  font-weight: 500;
+  transition: var(--nm-admin-transition);
+}
+
+#adminmenu li.menu-top {
+  border-left: 4px solid transparent;
+}
+
+#adminmenu li.menu-top:hover,
+#adminmenu li.opensub > a.menu-top,
+#adminmenu li.menu-top > a:focus {
+  background-color: #072e17 !important;
+  color: #ffffff !important;
+}
+
+#adminmenu li.menu-top:hover .wp-menu-image:before,
+#adminmenu li.opensub > a.menu-top .wp-menu-image:before {
+  color: var(--nm-admin-accent) !important;
+}
+
+/* Active Menu Item Pill & Highlight */
+#adminmenu li.current,
+#adminmenu li.wp-has-current-submenu {
+  background-color: #072e17 !important;
+  border-left-color: var(--nm-admin-accent) !important;
+}
+
+#adminmenu li.current > a.menu-top,
+#adminmenu li.wp-has-current-submenu > a.menu-top {
+  background-color: var(--nm-admin-primary) !important;
+  color: #ffffff !important;
+  font-weight: 600;
+}
+
+#adminmenu li.current .wp-menu-image:before,
+#adminmenu li.wp-has-current-submenu .wp-menu-image:before {
+  color: #ffffff !important;
+}
+
+/* Submenu Items */
+#adminmenu .wp-submenu {
+  background-color: #052211 !important;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
+#adminmenu .wp-submenu a {
+  color: #b4d3c0;
+  padding: 6px 20px;
+}
+
+#adminmenu .wp-submenu a:hover,
+#adminmenu .wp-submenu a:focus,
+#adminmenu .wp-submenu li.current a {
+  color: #ffffff !important;
+  background-color: rgba(255, 255, 255, 0.08) !important;
+}
+
+#adminmenu .wp-menu-name {
+  padding: 8px 10px;
+}
+
+/* Admin Menu Collapse Button */
+#collapse-button {
+  color: #b4d3c0;
+}
+#collapse-button:hover {
+  color: var(--nm-admin-accent) !important;
+}
+
+/* ==========================================================================
+   5. Cards, Postboxes & Dashboard Widgets
+   ========================================================================== */
+.postbox,
+.welcome-panel,
+#dashboard-widgets .postbox {
+  background: var(--nm-admin-surface);
+  border: 1px solid var(--nm-admin-border);
+  border-radius: var(--nm-admin-radius);
+  box-shadow: var(--nm-admin-shadow);
+  transition: var(--nm-admin-transition);
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+
+.postbox:hover,
+#dashboard-widgets .postbox:hover {
+  box-shadow: var(--nm-admin-shadow-hover);
+}
+
+.postbox-header,
+.postbox .hndle {
+  border-bottom: 1px solid var(--nm-admin-border);
+  background: var(--nm-admin-surface-alt);
+  padding: 12px 16px;
+}
+
+.postbox-header h2,
+.postbox .hndle span {
+  font-family: var(--nm-admin-font);
+  font-weight: 600;
+  color: var(--nm-admin-text);
+  font-size: 0.95rem;
+}
+
+.postbox .inside {
+  padding: 16px;
+  line-height: 1.6;
+}
+
+/* Welcome Panel Custom Treatment */
+.welcome-panel {
+  background: linear-gradient(135deg, #0c5a2c 0%, #072e17 100%);
+  color: #ffffff;
+  border: none;
+}
+
+.welcome-panel h2,
+.welcome-panel p,
+.welcome-panel .welcome-panel-close {
+  color: #ffffff !important;
+}
+
+.welcome-panel a {
+  color: var(--nm-admin-accent);
+}
+
+/* ==========================================================================
+   6. Buttons & Interactive Controls
+   ========================================================================== */
+.button,
+.button-primary,
+.button-secondary {
+  font-family: var(--nm-admin-font);
+  font-weight: 600;
+  border-radius: var(--nm-admin-radius-sm) !important;
+  transition: var(--nm-admin-transition) !important;
+  box-shadow: none !important;
+  text-shadow: none !important;
+  padding: 4px 14px !important;
+  min-height: 34px;
+  line-height: 24px;
+}
+
+.button-primary {
+  background: var(--nm-admin-primary) !important;
+  border-color: var(--nm-admin-primary) !important;
+  color: #ffffff !important;
+}
+
+.button-primary:hover,
+.button-primary:focus {
+  background: var(--nm-admin-primary-hover) !important;
+  border-color: var(--nm-admin-primary-hover) !important;
+  color: #ffffff !important;
+  transform: translateY(-1px);
+  box-shadow: 0 2px 6px rgba(12, 90, 44, 0.3) !important;
+}
+
+.button-secondary,
+.button {
+  background: var(--nm-admin-surface) !important;
+  border: 1px solid var(--nm-admin-border) !important;
+  color: var(--nm-admin-text) !important;
+}
+
+.button-secondary:hover,
+.button:hover {
+  background: var(--nm-admin-primary-light) !important;
+  border-color: var(--nm-admin-primary) !important;
+  color: var(--nm-admin-primary) !important;
+}
+
+/* ==========================================================================
+   7. Form Tables & Inputs
+   ========================================================================== */
+input[type=text],
+input[type=password],
+input[type=checkbox],
+input[type=radio],
+input[type=email],
+input[type=number],
+input[type=search],
+input[type=tel],
+input[type=url],
+select,
+textarea {
+  border: 1px solid var(--nm-admin-border);
+  border-radius: var(--nm-admin-radius-sm);
+  padding: 6px 12px;
+  font-family: var(--nm-admin-font);
+  box-shadow: none;
+  transition: var(--nm-admin-transition);
+}
+
+input[type=text]:focus,
+input[type=password]:focus,
+input[type=email]:focus,
+input[type=number]:focus,
+input[type=search]:focus,
+select:focus,
+textarea:focus {
+  border-color: var(--nm-admin-primary);
+  box-shadow: 0 0 0 2px var(--nm-admin-primary-light);
+  outline: none;
+}
+
+.form-table th {
+  font-family: var(--nm-admin-font);
+  font-weight: 600;
+  color: var(--nm-admin-text);
+  padding: 16px 10px 16px 0;
+}
+
+/* Tables (Post & Page List) */
+.wp-list-table {
+  border-radius: var(--nm-admin-radius);
+  overflow: hidden;
+  border: 1px solid var(--nm-admin-border);
+  box-shadow: var(--nm-admin-shadow);
+}
+
+.wp-list-table th {
+  font-family: var(--nm-admin-font);
+  font-weight: 700;
+  color: var(--nm-admin-text);
+  background: var(--nm-admin-surface-alt);
+}
+
+/* ==========================================================================
+   8. Admin Notices
+   ========================================================================== */
+.notice,
+div.updated,
+div.error {
+  border-radius: var(--nm-admin-radius);
+  border: 1px solid var(--nm-admin-border);
+  border-left-width: 4px;
+  box-shadow: var(--nm-admin-shadow);
+  padding: 10px 15px;
+  background: var(--nm-admin-surface);
+}
+
+.notice-success,
+div.updated {
+  border-left-color: #2e7d32 !important;
+  background-color: #f1f8e9;
+}
+
+.notice-error,
+div.error {
+  border-left-color: #d32f2f !important;
+  background-color: #ffebee;
+}
+
+.notice-warning {
+  border-left-color: #ed6c02 !important;
+  background-color: #fff8e1;
+}
+
+.notice-info {
+  border-left-color: #0288d1 !important;
+  background-color: #e1f5fe;
+}
+
+/* ==========================================================================
+   9. Login Screen (body.login)
+   ========================================================================== */
+body.login {
+  background: linear-gradient(135deg, #072e17 0%, #0c5a2c 50%, #153c22 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  margin: 0;
+}
+
+#login {
+  width: 100%;
+  max-width: 450px;
+  padding: 20px;
+  margin: auto;
+}
+
+/* Logo Replacement */
+#login h1 a {
+  background-image: var(--nm-admin-login-logo, url('../images/Logo-sidebar1.png')) !important;
+  background-size: contain !important;
+  background-position: center center !important;
+  background-repeat: no-repeat !important;
+  width: 100% !important;
+  height: 150px !important;
+  margin-bottom: 24px !important;
+  text-indent: -9999px;
+  overflow: hidden;
+  transition: transform 0.2s ease;
+}
+
+#login h1 a:hover {
+  transform: scale(1.03);
+}
+
+/* Login Form Card */
+body.login #loginform {
+  background: var(--nm-admin-surface);
+  border: none;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+  padding: 32px 28px;
+}
+
+body.login label {
+  font-family: var(--nm-admin-font);
+  font-weight: 600;
+  color: var(--nm-admin-text);
+  font-size: 0.88rem;
+}
+
+body.login input[type=text],
+body.login input[type=password] {
+  font-size: 1rem;
+  padding: 10px 14px;
+  border-radius: var(--nm-admin-radius-sm);
+  margin-top: 6px;
+  margin-bottom: 16px;
+}
+
+body.login .button-primary {
+  width: 100%;
+  height: 42px;
+  font-size: 1rem;
+  margin-top: 10px;
+  border-radius: var(--nm-admin-radius-sm) !important;
+  background: var(--nm-admin-primary) !important;
+  border-color: var(--nm-admin-primary) !important;
+}
+
+body.login .button-primary:hover {
+  background: var(--nm-admin-primary-hover) !important;
+}
+
+body.login #nav,
+body.login #backtoblog {
+  text-align: center;
+  padding: 0;
+}
+
+body.login #nav a,
+body.login #backtoblog a {
+  color: rgba(255, 255, 255, 0.85) !important;
+  font-family: var(--nm-admin-font);
+  font-weight: 500;
+  transition: var(--nm-admin-transition);
+}
+
+body.login #nav a:hover,
+body.login #backtoblog a:hover {
+  color: var(--nm-admin-accent) !important;
+  text-decoration: underline;
+}
